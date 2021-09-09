@@ -1,0 +1,7 @@
+﻿  소스.cpp
+C:\Users\jinyo\source\repos\week1C\week1C\소스.cpp(13,22): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jinyo\source\repos\week1C\week1C\소스.cpp(17,29): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jinyo\source\repos\week1C\week1C\소스.cpp(21,43): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jinyo\source\repos\week1C\week1C\소스.cpp(10,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jinyo\source\repos\week1C\week1C\소스.cpp(4,6): warning C4101: 'month' :참조되지 않은 지역 변수입니다.
+  week1C.vcxproj -> C:\Users\jinyo\source\repos\week1C\Debug\week1C-1.exe

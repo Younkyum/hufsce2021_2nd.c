@@ -1,0 +1,4 @@
+﻿  소스.cpp
+C:\Users\jinyo\Documents\GitHub\hufsce2021_2nd.c\programming_assignment_1\programming assignment1-4\소스.cpp(20,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jinyo\Documents\GitHub\hufsce2021_2nd.c\programming_assignment_1\programming assignment1-4\소스.cpp(17,15): warning C4101: 'k' :참조되지 않은 지역 변수입니다.
+  programming assignment1-4.vcxproj -> C:\Users\jinyo\Documents\GitHub\hufsce2021_2nd.c\programming_assignment_1\x64\Debug\programming assignment1-4.exe

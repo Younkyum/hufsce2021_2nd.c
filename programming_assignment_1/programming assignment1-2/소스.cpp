@@ -6,7 +6,7 @@ int main() {
 	int num_arr[10000]; //입력받는 배열
 	int count_arr[10000]; //원소를 각각 나누는 배열
 	int counter_arr[10000]; //한 원소의 개수를 나타내는 배열
-	int limit_num = (count+1) / 2; //과반수 체크 정수
+	int limit_num = (count + 1) / 2; //과반수 체크 정수
 
 	for (int i = 0; i < count; i++) { //배열 입력받기
 		scanf("%d", &num_arr[i]);
@@ -34,7 +34,7 @@ int main() {
 	}
 
 	int checker = 0;
-	for (int i = 0; i < b; i++) { //counter배열에서 과반수가 넘을경우 같은 위치에 있는 count배열에 있는 원소 출력
+	for (int i = b; i >= 0; i--) { //counter배열에서 과반수가 넘을경우 같은 위치에 있는 count배열에 있는 원소 출력
 		if (counter_arr[i] >= limit_num) {
 			printf("%d ", count_arr[i]);
 			checker = 1;

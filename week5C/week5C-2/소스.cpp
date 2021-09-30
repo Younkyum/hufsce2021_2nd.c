@@ -18,6 +18,10 @@ double perimeter(Point Polygon[], int n) {
 		qsum = sqrt(dex + dey);
 		result = result + qsum;
 	}
+	dex = Polygon[0].dx - Polygon[n - 1].dx;
+	dey = Polygon[0].dy - Polygon[n - 1].dy;
+	qsum = sqrt(pow(dex, 2) + pow(dey, 2));
+	result += qsum;
 	return result;
 }
 

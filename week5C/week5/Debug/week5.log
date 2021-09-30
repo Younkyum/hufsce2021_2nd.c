@@ -1,0 +1,4 @@
+﻿  소스.cpp
+C:\Users\jinyo\source\repos\week5\week5\소스.cpp(17,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jinyo\source\repos\week5\week5\소스.cpp(18,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  week5.vcxproj -> C:\Users\jinyo\source\repos\week5\Debug\week5C-1.exe

@@ -1,0 +1,5 @@
+﻿  소스.cpp
+C:\Users\jinyo\source\repos\programming_assignment_2\programming_assignment_2-4\소스.cpp(6,2): warning C4091: 'typedef ': 변수를 선언하지 않으면 'Point' 왼쪽은 무시됩니다.
+C:\Users\jinyo\source\repos\programming_assignment_2\programming_assignment_2-4\소스.cpp(68,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jinyo\source\repos\programming_assignment_2\programming_assignment_2-4\소스.cpp(70,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  programming_assignment_2-4.vcxproj -> C:\Users\jinyo\source\repos\programming_assignment_2\Debug\programming_assignment_2-4.exe

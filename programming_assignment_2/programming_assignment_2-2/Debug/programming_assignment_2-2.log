@@ -1,0 +1,4 @@
+﻿  소스.cpp
+C:\Users\jinyo\source\repos\programming_assignment_2\programming_assignment_2-2\소스.cpp(47,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jinyo\source\repos\programming_assignment_2\programming_assignment_2-2\소스.cpp(49,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  programming_assignment_2-2.vcxproj -> C:\Users\jinyo\source\repos\programming_assignment_2\Debug\programming_assignment_2-2.exe

@@ -10,37 +10,44 @@ int main() {
 		}
 	}
 
-	int garoIndex[1000];
-	int seroIndex[1000];
-	int max = 0;
+	int garom[1000];
+	int serom[1000];
+	long long sum = 0;
+	int c = 0;
 
 	for (int i = 0; i < sero; i++) {
 		for (int j = 0; j < garo; j++) {
-			if (boxes[i][j] >= max) {
-				max = boxes[i][j];
-				garoIndex[i] = j;
+			sum = sum + boxes[i][j];
+		}
+	}
+
+	for (int i = 0; i < sero; i++) {
+		garom[i] = boxes[i][0];
+		for (int j = 1; j < garo; j++) {
+			if (garom[i] < boxes[i][j]) {
+				garom[i] = boxes[i][j];
 			}
 		}
-		max = 0;
+		sum = sum - garom[i];
 	}
 
 	for (int i = 0; i < garo; i++) {
+		serom[i] = boxes[0][i];
 		for (int j = 0; j < sero; j++) {
-			if (boxes[j][i] >= max) {
-				max = boxes[j][i];
-				seroIndex[i] = j;
+			if (serom[i] < boxes[j][i]) {
+				serom[i] = boxes[j][i];
 			}
 		}
-		max = 0;
+		for (int j = 0; j < sero; j++) {
+			if (garom[j] == serom[i]) {
+				c = 1;
+			}
+		}
+		if (c == 0) {
+			sum = sum - serom[i];
+		}
+		c = 0;
 	}
 
-	int sum = 0;
-	for (int i = 0; i < sero; i++) {
-		for (int j = 0; j < garo; j++) {
-			if (j != garoIndex[i] && i != seroIndex[j]) {
-				sum += boxes[i][j];
-			}
-		}
-	}
-	printf("%d", sum);
+	printf("%lld", sum);
 }

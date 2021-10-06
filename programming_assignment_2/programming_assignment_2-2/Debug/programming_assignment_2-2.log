@@ -1,4 +1,10 @@
 ﻿  소스.cpp
-C:\Users\jinyo\source\repos\programming_assignment_2\programming_assignment_2-2\소스.cpp(47,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\jinyo\source\repos\programming_assignment_2\programming_assignment_2-2\소스.cpp(49,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  programming_assignment_2-2.vcxproj -> C:\Users\jinyo\source\repos\programming_assignment_2\Debug\programming_assignment_2-2.exe
+C:\Users\jinyo\source\repos\programming_assignment_2\programming_assignment_2-2\소스.cpp(20,23): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\jinyo\source\repos\programming_assignment_2\programming_assignment_2-2\소스.cpp(48,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jinyo\source\repos\programming_assignment_2\programming_assignment_2-2\소스.cpp(51,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  소스1.cpp
+C:\Users\jinyo\source\repos\programming_assignment_2\programming_assignment_2-2\소스1.cpp(26,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\jinyo\source\repos\programming_assignment_2\programming_assignment_2-2\소스1.cpp(29,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  코드를 생성하고 있습니다...
+C:\Users\jinyo\source\repos\programming_assignment_2\programming_assignment_2-2\소스1.cpp(22): error C4716: 'finder': 값을 반환해야 합니다.
+C:\Users\jinyo\source\repos\programming_assignment_2\programming_assignment_2-2\소스.cpp(18): warning C4700: 초기화되지 않은 'minimum' 지역 변수를 사용했습니다.

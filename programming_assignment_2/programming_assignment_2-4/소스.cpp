@@ -71,7 +71,6 @@ int main() {
 	final = recArr[0];
 	for (int i = 0; i < n; i++) {
 		final = overlap_rectangle(final, recArr[i]);
-		printf("done\n");
 	}
 	g = final.upperRightPt.x - final.lowerLeftPt.x;
 	s = final.upperRightPt.y - final.lowerLeftPt.y;

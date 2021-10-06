@@ -43,7 +43,6 @@ int find_overlap(int a, int b, int c, int d) {
 		else Overlap.y = New_A.y;
 	}
 	else {
-		printf("-1");
 		return 0;
 	}
 	length = Overlap.y - Overlap.x;

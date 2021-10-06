@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int whereIsHospital(int a[], int n) {
-    int ave_sum;
-    int minimum = 100000;
+int whereIsHospital(int* a, int n) {
+    float ave_sum;
+    int minimum;
     int index;
     for (int i = a[n - 1]; i >= 0; i--) {
         ave_sum = 0;
@@ -14,7 +15,7 @@ int whereIsHospital(int a[], int n) {
                 ave_sum = ave_sum + a[j] - i;
             }
         }
-        if (ave_sum <= minimum) {
+        if (ave_sum <= minimum || i == a[n - 1]) {
             index = i;
             minimum = ave_sum;
         }
@@ -24,27 +25,28 @@ int whereIsHospital(int a[], int n) {
 
 void sorted(int a[], int n) {
     int temp;
-    for (int i = 0; i < n; i++)   
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < n - 1; j++)   
+        for (int j = 0; j < n - 1; j++)
         {
-            if (a[j] > a[j + 1])          
-            {                                
+            if (a[j] > a[j + 1])
+            {
                 temp = a[j];
                 a[j] = a[j + 1];
-                a[j + 1] = temp;           
+                a[j + 1] = temp;
             }
         }
     }
 }
 
 int main() {
+
     int loc;
     float total = 0;
     float ave;
     int n;
-    int a[10000];
     scanf("%d", &n);
+    int* a = (int*)malloc(sizeof(int) * n);
     for (int i = 0; i < n; i++) {
         scanf("%d", &a[i]);
     }
@@ -60,4 +62,5 @@ int main() {
     }
     ave = total / n;
     printf("%d %.2f", loc, ave);
+
 }

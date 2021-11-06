@@ -52,7 +52,12 @@ int Fraction::gcd(int a,int b){
 	return a;
 }
 void Fraction::print(){
-	cout << numerator << "/" << denominator << endl;
+	if (denominator < 0) {
+		cout << numerator*(-1) << "/" << denominator*(-1) << endl;
+	} else {
+		cout << numerator << "/" << denominator << endl;
+	}
+	
 }
 Fraction Fraction::add(Fraction r){
 	Fraction result;

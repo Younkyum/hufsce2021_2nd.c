@@ -55,7 +55,7 @@ void Account::changePhoneNo(string phoneno) {
 	this->pnum = phoneno;
 }
 void Account::inquire() {
-	cout << anum << " " << name << " " << pnum << " " << remain << endl;
+	cout << anum << " " << name << " " << pnum << " " << remain << " " << maxwd << endl;
 }
 void Account::avrDepositAmount() {
 	cout << icount << " " << income / icount << endl;

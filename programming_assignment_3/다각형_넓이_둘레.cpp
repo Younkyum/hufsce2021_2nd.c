@@ -27,6 +27,13 @@ public:
 	}
 };
 
+float ccw(Point p, Point q, Point r) {
+	float first = (q.getX() - p.getX()) * (r.getX() - p.getX());
+	float second = (q.getY() - p.getY()) * (r.getY() - p.getY());
+	float result = first - second;
+	return result;
+}
+
 class Polygon {
 private:
 	Point *points = new Point[n];
@@ -43,36 +50,23 @@ public:
 		points[count].mp(x, y);
 		count++;
 	}
-	float roundc() {
+	long roundc() {
 		float sum = 0;
 		for (int i = 0; i < n; i++) {
 			sum = sum + sqrt(pow(points[i % n].getX() - points[(i + 1) % n].getX(), 2) + pow(points[i % n].getY() - points[(i + 1) % n].getY(), 2));
 		}
-		return sum;
+		return sum+0.5;
 	}
-	float areac() {
+	long long areac() {
 		float ar;
-		float x3, y3;
-		float x1, y1, x2, y2;
-		float sumx = 0, sumy = 0;
-		for (int i = 0; i < n; i++) {
-			sumx += points[i].getX();
-			sumy += points[i].getY();
+		float sum = 0, ccwr;
+		for (int i = 1; i < n-1; i++) {
+			ccwr = ccw(points[0], points[i], points[i+1]);
+			sum += ccwr;
 		}
-		x3 = sumx / n;
-		y3 = sumy / n;
-		x1 = points[0].getX(); 
-		y1 = points[0].getY();
-		x2 = points[1].getX(); 
-		y2 = points[1].getY();
-		ar = (x1 * y2 + x2 * y3 + x3 * y1) - (x2 * y1 + x3 * y2 + x1 * y3);
-		if (ar >= 0) { 
-		ar = ar/2 * n; 
-		}
-		else { 
-		ar = (-1) * ar/2 * n; 
-		}
-		return ar;
+		if (sum < 0) sum *= -1;
+		sum = sum / 2;
+		return sum + 0.5;
 	}
 };
 
@@ -88,5 +82,8 @@ int main(void)
 	}
 	cout << poly.roundc() << endl;
 	cout << poly.areac() << endl;
+	~poly();
 	return 0;
 }
+
+

@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-class calculator {
+class Calculator {
 public:
 	virtual int add(int a, int b) = 0;
 	virtual int subtract(int a, int b) = 0;
 	virtual float average(int a[], int size) = 0;
 };
 
-class GoodCalc : calculator {
+class GoodCalc : public Calculator {
 public:
 	int add(int a, int b) override {
 		int sum;

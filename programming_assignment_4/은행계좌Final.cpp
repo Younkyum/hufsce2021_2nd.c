@@ -156,7 +156,7 @@ int main() {
 	while (cin >> command) {
 		if (command == "신규") {
 			cin >> name >> amount;
-			//bank.open(name, amount);
+			bank.open(name, amount);
 		} else if (command == "입금") {
 			cin >> accNo >> amount;
 			bank.deposit(accNo, amount);
@@ -182,15 +182,3 @@ int main() {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-

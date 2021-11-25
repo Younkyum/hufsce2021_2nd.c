@@ -32,7 +32,7 @@ public:
 
 class Bank {
 public:
-	int number = 1111;
+	int number = 111111;
 	int count;
 	Account *bankacc;
 	int nc;
@@ -156,7 +156,7 @@ int main() {
 	while (cin >> command) {
 		if (command == "신규") {
 			cin >> name >> amount;
-			bank.open(name, amount);
+			//bank.open(name, amount);
 		} else if (command == "입금") {
 			cin >> accNo >> amount;
 			bank.deposit(accNo, amount);
@@ -178,7 +178,6 @@ int main() {
 		} else if (command == "전체계좌조회") {
 			bank.all_print();
 		} else if (command == "종료") {
-			cout << "종료합니다" << endl;
 			break;
 		}
 	}

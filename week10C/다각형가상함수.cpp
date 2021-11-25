@@ -18,9 +18,7 @@ public:
 		cout<<"Shape Draw"<<endl;
 	}
 	virtual void move(int x, int y) = 0;
-	virtual double getArea(){
-		return 0;
-	}
+	virtual double getArea() = 0;
 	virtual Shape* createShape() = 0;
 };
 

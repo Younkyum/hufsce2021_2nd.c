@@ -53,7 +53,8 @@ public:
 	}
 	virtual Shape* createShape()
 	{
-		return new Rectangle;
+		Shape *a = new Rectangle;
+		return a;
 	}
 };
 
@@ -88,7 +89,8 @@ public:
 	}
 	virtual Shape* createShape()
 	{
-		return new Ellipse;
+		Shape *a = new Ellipse;
+		return a;
 	}
 };
 class Triangle : public Shape
@@ -122,8 +124,9 @@ public:
 	}
 	virtual Shape* createShape()
 	{
-		return new Triangle;
-		}
+		Shape *a = new Triangle;
+		return a;
+	}
 };
 int main()
 {

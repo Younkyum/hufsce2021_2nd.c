@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#define MAX 1000
+#define MAX 10000
 using namespace std;
 
 
@@ -92,7 +92,7 @@ public:
 	}
 	void withdraw(int num, int amount) {
 		if(finder(num) == -1) {
-			cout << "Error2" << endl;
+			cout << "Error1" << endl;
 		} else {
 			bankacc[finder(num)].outcome(amount);
 		}
@@ -101,12 +101,18 @@ public:
 		if (finder(num1) == -1 || finder(num2) == -1) {
 			cout << "Error1" << endl;
 		} else {
+			if (bankacc[finder(num1)].balance >= amount) {
+				bankacc[finder(num2)].income(amount);
+			}
 			bankacc[finder(num1)].outcome(amount);
-			bankacc[finder(num2)].income(amount);
 		}
 	}
 	void printa(int num) {
-		bankacc[finder(num)].print();
+		if (finder(num) == -1) {
+			cout << "Error1" << endl;
+		} else {
+			bankacc[finder(num)].print();
+		}
 	}
 	void find_and_print(string fname) {
 		Account *namer = new Account[MAX];

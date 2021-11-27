@@ -119,7 +119,7 @@ public:
 			}
 		}
 		if (counter == 0) {
-			cout << "Error1" << endl;
+			cout << "Error3" << endl;
 		} else {
 			basic = 111110;
 			for (int i = 0; i < counter; i++) {

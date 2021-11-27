@@ -32,19 +32,30 @@ public:
 
 class Bank {
 public:
-	int number = 111111;
+	int number;
 	int count;
-	Account *bankacc;
+	Account *bankacc = new Account[MAX];
 	int nc;
 	Bank() {
 		this->number = 111111;
 		this->nc = 0;
+		Account *bankacc = new Account[1000];
 	}
 	Bank(int count) {
 		number = 111111;
 		this->count = count;
 		this->nc = 0;
-		Account *bankacc = new Account[this->count];
+		Account *bankacc = new Account[count];
+	}
+	~Bank() {
+		delete [] bankacc;
+	}
+	void open(string name, int balance) {
+		Account a;
+		a.make(number, name, balance);
+		this->number++;
+		bankacc[nc] = a;
+		this->nc++;
 	}
 	int finder(int fnum) {
 		int reminder = -1;
@@ -59,29 +70,18 @@ public:
 			return reminder;
 		}
 	}
-	int findnextlevel(Account a[], int fnum) {
+	int findnextlevel(Account a[], int fnum, int na) {
 		int reminder = -1;
 		int c;
-		int min = 0;
-		for (int i = 0; i < nc; i++) {
+		int min = MAX;
+		for (int i = 0; i < na; i++) {
 			c = a[i].accnum;
-			if (c - fnum > min) {
+			if (c - fnum <= min && c > fnum) {
 				reminder = i;
 				min = c - fnum;
 			}
 		}
-		if (min == 0 || reminder == -1) {
-			return -1;
-		} else {
-			return reminder;
-		}
-	}
-	void open(string name, int balance) {
-		Account a;
-		a.make(number, name, balance);
-		number++;
-		bankacc[nc] = a;
-		nc++;
+		return reminder;
 	}
 	void deposit(int num, int amount) {
 		if (finder(num) == -1) {
@@ -109,23 +109,25 @@ public:
 		bankacc[finder(num)].print();
 	}
 	void find_and_print(string fname) {
-		Account namer[MAX];
+		Account *namer = new Account[MAX];
 		int basic = 111111;
-		int counter = 1;
+		int counter = 0;
 		for (int i = 0; i < this->nc; i++) {
 			if (bankacc[i].accname == fname) {
-				namer[counter - 1] = bankacc[i];
+				namer[counter] = bankacc[i];
 				counter++;
 			}
 		}
-		if (counter == 1) {
+		if (counter == 0) {
 			cout << "Error1" << endl;
 		} else {
+			basic = 111110;
 			for (int i = 0; i < counter; i++) {
-				namer[findnextlevel(namer, basic)].print();
-				basic = namer[findnextlevel(namer, basic)].accnum;
+				namer[findnextlevel(namer, basic, counter)].print();
+				basic = namer[findnextlevel(namer, basic, counter)].accnum;
 			}
 		}
+		delete [] namer;
 	}
 	void eraser(int num) {
 		int index;
@@ -139,9 +141,9 @@ public:
 	}
 	void all_print() {
 		int basic = 111110;
-		for (int i = 0; i < count; i++) {
-			bankacc[findnextlevel(bankacc, basic)].print();
-			basic = bankacc[findnextlevel(bankacc, basic)].accnum;
+		for (int i = 0; i < nc; i++) {
+			bankacc[findnextlevel(bankacc, basic, nc)].print();
+			basic = bankacc[findnextlevel(bankacc, basic, nc)].accnum;
 		}
 	}
 };
